@@ -22,7 +22,6 @@ expect "Password:"
 send "\n"
 expect ">" 
 send "show ${show}\n"
-sleep 1
 expect ">" 
 send "quit\n"
 expect eof
