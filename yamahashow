@@ -6,14 +6,12 @@
 # console lines infinity
 # console columns 200
 # 
+# [ARGV]
 # ARGV[0] : HostIP
 # ARGV[1] : show command
 #
-#
-# [ex]
+# [run]
 # yamahashow ADDRESS "config"
-
-
 
 set hostname [lindex $argv 0]
 set show [lindex $argv 1]
