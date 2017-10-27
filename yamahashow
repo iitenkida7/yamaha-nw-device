@@ -1,0 +1,32 @@
+#!/usr/bin/expect
+# Yamaha show techinfo
+#
+# [pre set config]
+# console character ascii
+# console lines infinity
+# console columns 200
+# 
+# ARGV[0] : HostIP
+# ARGV[1] : show command
+#
+#
+# [ex]
+# yamahashow ADDRESS "config"
+
+
+
+set hostname [lindex $argv 0]
+set show [lindex $argv 1]
+
+set timeout 8
+spawn telnet ${hostname} 
+expect "Password:" 
+send "\n"
+expect ">" 
+send "show ${show}\n"
+sleep 1
+expect ">" 
+send "quit\n"
+expect eof
+exit
+
